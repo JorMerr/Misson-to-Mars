@@ -1,3 +1,6 @@
+# Ignore Module_Work folder
+/Module_Work
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
