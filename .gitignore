@@ -1,5 +1,6 @@
 # Ignore Module_Work folder
-/Module_Work
+/Module_Work/Practice
+/Module_Work/.ipynb_checkpoints
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
