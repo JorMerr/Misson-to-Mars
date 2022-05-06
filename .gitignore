@@ -1,6 +1,7 @@
 # Ignore Module_Work folder
 /Module_Work/Practice
 /Module_Work/.ipynb_checkpoints
+Mission_to_Mars_Challenge_starter_code.ipynb
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
