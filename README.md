@@ -17,8 +17,11 @@ The project is built primarly with Python, but testing and development was done 
 The functions in `scraping.py` automate the navigation to, and collection of, information related to Mars.
 
 The first website visted is https://redplanetscience.com to gather the most recent available article title, and summary paragraph content. 
+
 The next website visted is https://spaceimages-mars.com to scrape the most recent Featured Image at the full size and return the full image URL.
+
 The third website visted is https://galaxyfacts-mars.com where the script reads the Mars vs Earth comparison table and saves it as a Pandas DataFrame.
+
 The final website visted is https://marshemispheres.com where our script clicks the link to each article on the page, then searches that page for the full image URL, and the Article Title, saving it to a key:value pair before returning to the main page and moving to the next article. Each key:value pair is saved to a list of dictionaries.
 
 The functions in `app.py` create the Flask website, and configure the MongoDB database where our scraped data is stored. The root route of the application references the `index.html` template within the templates directory of our repository.
