@@ -15,6 +15,7 @@ def scrape_all():
     # set news title and paragraph variables
     news_title, news_paragraph = mars_news(browser)
 
+
     # run all scraping functions and store results in dictionary
     data = {
         "news_title": news_title,
@@ -107,10 +108,10 @@ def mars_facts():
     return df.to_html()
 
 # Hemisphere Data
-# define hemi_data function
+# define hemisphere function
 def hemisphere(browser):
     # Visis URL
-    url = 'https://spaceimages-mars.com'
+    url = 'https://marshemispheres.com/'
     browser.visit(url)
 
     # Create a list to hold images and titles
@@ -149,7 +150,7 @@ def hemisphere(browser):
             return None
         # return to main page
         browser.back()
-
+    print(hemisphere_image_urls)
     # return the list of hemisphere data
     return hemisphere_image_urls
 
