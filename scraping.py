@@ -150,7 +150,7 @@ def hemisphere(browser):
             return None
         # return to main page
         browser.back()
-    print(hemisphere_image_urls)
+    
     # return the list of hemisphere data
     return hemisphere_image_urls
 
