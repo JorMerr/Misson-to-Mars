@@ -14,8 +14,6 @@ def scrape_all():
 
     # set news title and paragraph variables
     news_title, news_paragraph = mars_news(browser)
-    # set variable for hemisphere data
-    hemisphere_image_urls = hemisphere(browser)
 
     # run all scraping functions and store results in dictionary
     data = {
@@ -23,7 +21,7 @@ def scrape_all():
         "news_paragraph": news_paragraph,
         "featured_image": featured_image(browser),
         "facts": mars_facts(),
-        "hemispheres": hemisphere_image_urls,
+        "hemispheres": hemisphere(browser),
         "last_modified": dt.datetime.now()
     }
 
@@ -119,11 +117,11 @@ def hemisphere(browser):
     hemisphere_image_urls = []
 
     # Parse the html with soup
-    html = browser.html
-    soup = soup(html, 'html.parser')
+    html_hemisphere = browser.html
+    soup_hemisphere = soup(html_hemisphere, 'html.parser')
 
     # Retrieve the image urls and titles
-    results = soup.find_all('div', class_='item')
+    results = soup_hemisphere.find_all('div', class_='item')
 
     results_count = len(results)
 
